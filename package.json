@@ -1,5 +1,5 @@
 {
-  "name": "kauai2026",
+  "name": "oahu2026",
   "type": "module",
   "version": "0.0.1",
   "engines": {
@@ -9,9 +9,25 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "docker:build": "docker build -t oahu2026_i .",
+    "docker:dev": "docker run --name oahu2026 -d -p 8080:80 oahu2026_i",
+    "docker:compose:up": "echo docker compose up -d",
+    "docker:compose:restart": "echo docker compose up -d --no-deps oahu2026_i ."
   },
   "dependencies": {
-    "astro": "^7.3.8"
+    "@astrojs/react": "^7.1.1",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "astro": "^7.4.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.10",
+    "prettier-plugin-astro": "^1.1.1",
+    "typescript": "^7.0.2"
   }
 }
