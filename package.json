@@ -1,5 +1,5 @@
 {
-  "name": "oahu2026",
+  "name": "ohau2026",
   "type": "module",
   "version": "0.0.1",
   "engines": {
@@ -10,10 +10,10 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "docker:build": "docker build -t oahu2026_i .",
-    "docker:dev": "docker run --name oahu2026 -d -p 8080:80 oahu2026_i",
+    "docker:build": "docker build -t ohau2026_i .",
+    "docker:dev": "docker run --name ohau2026 -d -p 8080:80 ohau2026_i",
     "docker:compose:up": "echo docker compose up -d",
-    "docker:compose:restart": "echo docker compose up -d --no-deps oahu2026_i ."
+    "docker:compose:restart": "echo docker compose up -d --no-deps ohau2026_i ."
   },
   "dependencies": {
     "@astrojs/react": "^7.1.1",
