@@ -1,0 +1,22 @@
+---
+interface Props {
+  location: string;
+}
+
+import { locations, locationKeys } from "./locations.ts";
+
+const { location } = Astro.props;
+const l = locations[location];
+---
+
+{locationKeys.includes(location) ? (
+  Object.hasOwn(l, "link") ? (
+    <a href={"l.link"} class="text-blue-400 underline">
+      {location}
+    </a>
+  ) : (
+    <>{location}</>
+  )
+) : (
+  <span>Program error did not find ({location}) location. (2)</span>
+)}

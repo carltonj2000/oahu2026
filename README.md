@@ -1,4 +1,4 @@
-# Ohau October 2026
+# Oahu October 2026
 
 ## Creation History
 
@@ -8,4 +8,6 @@ cd ohau2026
 npx astro add tailwind
 npx astro add react
 npm install -D prettier prettier-plugin-astro typescript
+npm install -D prettier-plugin-tailwindcss
+# add .prettierrc { "plugins": ["prettier-plugin-tailwindcss"] }
 ```

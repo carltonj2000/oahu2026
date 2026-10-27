@@ -1,0 +1,21 @@
+---
+interface Props {
+  location: string;
+}
+
+import { locationKeys } from "./locations.ts";
+import Name from "./name.astro";
+import { Map } from "./map.tsx";
+
+const { location } = Astro.props;
+---
+
+{locationKeys.includes(location) ? (
+  <span class="my-1.5 inline-block">
+    <Name location={location} /> <Map location={location} client:load />
+  </span>
+) : (
+  <span class="my-1.5 inline-block">
+    Program error did not find ({location}) location. (3)
+  </span>
+)}

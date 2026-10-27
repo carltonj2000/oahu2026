@@ -1,8 +1,73 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Top from "../components/top.tsx";
+import { locations } from "../components/locations.ts";
+import Mn from "../components/map-n-name.astro";
+import { Days, DaysO, getOrdinalDay } from "../components/activities.tsx";
 ---
 
 <Layout>
-	<Top />
+	<main class="mx-auto flex h-full max-w-2xl flex-col items-center bg-fuchsia-50">
+		<div class="mb-3 flex w-full items-center justify-between bg-fuchsia-300 px-2 py-1">
+			<h1 class="text-xl font-semibold">Oahu</h1>
+			<h1 class="text-xl font-semibold">October 2026</h1>
+			<h1 class="text-xl font-semibold">Plan</h1>
+		</div>
+
+		<table class="mx-1 mt-3">
+			<thead>
+				<tr class="bg-fuchsia-300 text-left">
+					<th class="px-3 py-2">Date</th>
+					<th class="px-3 py-2">Activity</th>
+					<th class="px-3 py-2">Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				{Days.map((day) => (
+					<tr class="text-left odd:bg-fuchsia-200 even:bg-fuchsia-100">
+						<td class="px-2 py-1">
+							{DaysO[day].weekday}
+							<br />
+							{getOrdinalDay(DaysO[day].day)}
+						</td>
+						<td class="px-2 py-1">{DaysO[day].content(true)}</td>
+						<td class="px-2 py-1">{DaysO[day].content()}</td>
+					</tr>
+				))}
+			</tbody>
+		</table>
+
+		<table class="mx-1 mt-4 mb-8">
+			<thead>
+				<tr class="bg-fuchsia-300 text-left">
+					<th class="px-3 py-2">Topic</th>
+					<th class="px-3 py-2">Options</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="text-left odd:bg-fuchsia-200 even:bg-fuchsia-100">
+					<td class="px-2 py-1">Activities</td>
+					<td class="flex flex-col px-2 py-1">
+						<p>
+							<Mn location={"Polynesian Cultural Center"} />
+						</p>
+					</td>
+				</tr>
+				<tr class="text-left odd:bg-fuchsia-200 even:bg-fuchsia-100">
+					<td class="px-2 py-1">Shopping</td>
+					<td class="flex flex-col px-2 py-1">
+						<ul>
+							{Object.entries(locations).map(([n, l], i) => {
+								if (l.catagory !== "Shopping") return null;
+								return (
+									<li key={i}>
+										<Mn location={n} />
+									</li>
+								);
+							})}
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</main>
 </Layout>

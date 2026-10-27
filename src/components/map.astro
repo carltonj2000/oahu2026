@@ -1,0 +1,33 @@
+---
+interface Props {
+  location: string;
+}
+
+import { locations, locationKeys } from "./locations.ts";
+
+const { location } = Astro.props;
+const l = locations[location];
+const inactive = !l.google || l.google.length === 0;
+---
+
+{locationKeys.includes(location) ? (
+  <button class="my-1.5 inline-block" id="map">
+    <img
+      src="/Google_Maps_ico.svg"
+      class={`ml-4 inline brightness-75 filter ${inactive ? "grayscale" : ""}`}
+      alt={`Google Maps`}
+      width="20"
+      height="20"
+    />
+  </button>
+) : (
+  <span>Program error did not find ({location}) location. (1)"</span>
+)}
+
+<script>
+  console.log("client ran");
+  const button = document.querySelector("#map");
+  button?.addEventListener("click", () => {
+    console.log("clicked");
+  });
+</script>

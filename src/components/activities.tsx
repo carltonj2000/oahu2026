@@ -1,3 +1,16 @@
+/*
+Olomana (three notches), and pali notches. I think the latter might be closed
+now but I’m sure people still do it. Up to your discretion. Kailua is worth
+going to, pillbox hike is there, the beach is really nice, and you can rent a
+kayak to get to the Mokes. Not a hike, but China walls is nice for sunset and
+watching people cliffjump/surf.
+
+Lots of other peaks and waterfall hikes I can’t remember but easy to look up.
+Also, a lot of them are inside neighborhoods or off the side of the road. So
+don’t leave anything valuable inside.
+
+Pearl Harbor
+*/
 export const o28wed = () => {
   return <div>tbd</div>;
 };
@@ -46,7 +59,13 @@ export const getOrdinalDay = (date: Date): string => {
   }
 };
 
-export const DaysO = {
+export type DayT = {
+  day: Date;
+  weekday: string;
+  content: (activity?: boolean) => React.ReactElement;
+};
+
+export const DaysO: { [key: string]: DayT } = {
   Wednesday28: {
     day: new Date(2026, 9, 28),
     weekday: "Wed",
@@ -90,3 +109,4 @@ export const DaysO = {
 };
 
 export const Days = Object.keys(DaysO);
+export type DaysT = keyof typeof DaysO;
