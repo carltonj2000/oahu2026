@@ -1,0 +1,114 @@
+---
+/*
+Olomana (three notches), and pali notches. I think the latter might be closed
+now but I’m sure people still do it. Up to your discretion. Kailua is worth
+going to, pillbox hike is there, the beach is really nice, and you can rent a
+kayak to get to the Mokes. Not a hike, but China walls is nice for sunset and
+watching people cliffjump/surf.
+
+Lots of other peaks and waterfall hikes I can’t remember but easy to look up.
+Also, a lot of them are inside neighborhoods or off the side of the road. So
+don’t leave anything valuable inside.
+
+Pearl Harbor
+
+*/
+import o28wed from "./o28wed.astro";
+import o29thur from "./o29thur.astro";
+import o30fri from "./o30fri.astro";
+import o31sat from "./o31sat.astro";
+import n1sun from "./n1sun.astro";
+import n2mon from "./n2mon.astro";
+import n3tue from "./n3tue.astro";
+import n4wed from "./n4wed.astro";
+
+const DaysO = {
+	Wednesday28: {
+		day: new Date(2026, 9, 28),
+		weekday: "Wed",
+		content: o28wed,
+	},
+	Thursday29: {
+		day: new Date(2026, 9, 29),
+		weekday: "Thu",
+		content: o29thur,
+	},
+	Friday30: {
+		day: new Date(2026, 9, 30),
+		weekday: "Fri",
+		content: o30fri,
+	},
+	Saturday31: {
+		day: new Date(2026, 9, 31),
+		weekday: "Sat",
+		content: o31sat,
+	},
+	Sunday1: {
+		day: new Date(2026, 10, 1),
+		weekday: "Sun",
+		content: n1sun,
+	},
+	Monday2: {
+		day: new Date(2026, 11, 2),
+		weekday: "Mon",
+		content: n2mon,
+	},
+	Tuesday3: {
+		day: new Date(2026, 11, 3),
+		weekday: "Tue",
+		content: n3tue,
+	},
+	Wednesday4: {
+		day: new Date(2026, 11, 4),
+		weekday: "Wed",
+		content: n4wed,
+	},
+};
+
+const Days = Object.keys(DaysO);
+
+const getOrdinalDay = (date: Date): string => {
+	const day = date.getDate();
+	if (day > 3 && day < 21) return `${day}th`;
+	switch (day % 10) {
+		case 1:
+			return `${day}st`;
+		case 2:
+			return `${day}nd`;
+		case 3:
+			return `${day}rd`;
+		default:
+			return `${day}th`;
+	}
+};
+---
+
+<table class="mx-1 mt-3">
+	<thead>
+		<tr class="bg-fuchsia-300 text-left">
+			<th class="px-3 py-2">Date</th>
+			<th class="px-3 py-2">Activity</th>
+			<th class="px-3 py-2">Details</th>
+		</tr>
+	</thead>
+	<tbody>
+		{Days.map((day) => {
+			const Activity = DaysO[day].content;
+			return (
+				<tr class="text-left odd:bg-fuchsia-200 even:bg-fuchsia-100">
+					<td class="px-2 py-1">
+						{DaysO[day].weekday}
+						<br />
+						{getOrdinalDay(DaysO[day].day)}
+					</td>
+					<td class="px-2 py-1">
+						<Activity activity={true} />
+					</td>
+					<td class="px-2 py-1">
+						<Activity />
+					</td>
+				</tr>
+			);
+		})}
+	</tbody>
+</table>

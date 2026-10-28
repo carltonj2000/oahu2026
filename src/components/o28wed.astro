@@ -1,0 +1,9 @@
+---
+interface Props {
+  activity?: boolean;
+}
+
+const { activity } = Astro.props;
+---
+
+{activity ? <div>Hiking</div> : <div>tbd</div>}

@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import { locations } from "../components/locations.ts";
 import Mn from "../components/map-n-name.astro";
-import { Days, DaysO, getOrdinalDay } from "../components/activities.tsx";
+import Days from "../components/days.astro";
 ---
 
 <Layout>
@@ -13,28 +13,7 @@ import { Days, DaysO, getOrdinalDay } from "../components/activities.tsx";
 			<h1 class="text-xl font-semibold">Plan</h1>
 		</div>
 
-		<table class="mx-1 mt-3">
-			<thead>
-				<tr class="bg-fuchsia-300 text-left">
-					<th class="px-3 py-2">Date</th>
-					<th class="px-3 py-2">Activity</th>
-					<th class="px-3 py-2">Details</th>
-				</tr>
-			</thead>
-			<tbody>
-				{Days.map((day) => (
-					<tr class="text-left odd:bg-fuchsia-200 even:bg-fuchsia-100">
-						<td class="px-2 py-1">
-							{DaysO[day].weekday}
-							<br />
-							{getOrdinalDay(DaysO[day].day)}
-						</td>
-						<td class="px-2 py-1">{DaysO[day].content(true)}</td>
-						<td class="px-2 py-1">{DaysO[day].content()}</td>
-					</tr>
-				))}
-			</tbody>
-		</table>
+		<Days />
 
 		<table class="mx-1 mt-4 mb-8">
 			<thead>
