@@ -1,0 +1,16 @@
+---
+interface Props {
+  location: string;
+}
+
+import { locations, locationKeys } from "./locations.ts";
+
+const { location } = Astro.props;
+const l = locations[location];
+---
+
+{locationKeys.includes(location) ? (
+  <>{l.catagory}</>
+) : (
+  <span>Program error did not find ({location}) location. (4)</span>
+)}

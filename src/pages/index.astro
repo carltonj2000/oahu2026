@@ -25,26 +25,11 @@ import Days from "../components/days.astro";
 			<tbody>
 				<tr class="text-left odd:bg-fuchsia-200 even:bg-fuchsia-100">
 					<td class="px-2 py-1">Activities</td>
-					<td class="flex flex-col px-2 py-1">
-						<p>
-							<Mn location={"Polynesian Cultural Center"} />
-						</p>
-					</td>
+					<td class="flex flex-col px-2 py-1">tbd</td>
 				</tr>
 				<tr class="text-left odd:bg-fuchsia-200 even:bg-fuchsia-100">
 					<td class="px-2 py-1">Shopping</td>
-					<td class="flex flex-col px-2 py-1">
-						<ul>
-							{Object.entries(locations).map(([n, l], i) => {
-								if (l.catagory !== "Shopping") return null;
-								return (
-									<li key={i}>
-										<Mn location={n} />
-									</li>
-								);
-							})}
-						</ul>
-					</td>
+					<td class="flex flex-col px-2 py-1">tbd</td>
 				</tr>
 			</tbody>
 		</table>

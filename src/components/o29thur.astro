@@ -1,9 +1,22 @@
 ---
+import Mn from "../components/map-n-name.astro";
+import Cat from "../components/category.astro";
 interface Props {
-  activity: boolean;
+  activity?: boolean;
 }
 
 const { activity } = Astro.props;
+const l = "Polynesian Cultural Center";
 ---
 
-{activity ? <div>Hiking</div> : <div>tbd</div>}
+{activity ? (
+  <div>
+    <Cat location={l} />
+  </div>
+) : (
+  <div>
+    <Mn location={l} />
+    <br />
+    Open 12-8:30 PM.
+  </div>
+)}

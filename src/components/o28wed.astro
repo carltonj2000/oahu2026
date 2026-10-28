@@ -1,9 +1,27 @@
 ---
 interface Props {
-  activity?: boolean;
+  activity: boolean;
 }
 
 const { activity } = Astro.props;
+import { locations } from "../components/locations.ts";
+import Mn from "../components/map-n-name.astro";
+const c = "Shopping";
 ---
 
-{activity ? <div>Hiking</div> : <div>tbd</div>}
+{activity ? (
+  <div>{c}</div>
+) : (
+  <div>
+    <ul>
+      {Object.entries(locations).map(([n, l]) => {
+        if (l.catagory !== c) return null;
+        return (
+          <li>
+            <Mn location={n} />
+          </li>
+        );
+      })}
+    </ul>
+  </div>
+)}

@@ -1,39 +1,32 @@
-export enum CategoryE {
-  Shopping = "Shopping",
-  Hiking = "Hiking",
-  Activity = "Activity",
-}
-
 export const locations: Record<
   string,
-  { google: string; link?: string; catagory?: CategoryE }
+  { google: string; link?: string; catagory?: string }
 > = {
   ["Polynesian Cultural Center"]: {
     google: "https://maps.app.goo.gl/TY6GYmFcCLkVL3X89",
     link: "https://www.polynesia.com/",
-    catagory: CategoryE.Activity,
+    catagory: "Cultural",
   },
   ["Apt by HomeWorld"]: {
     google: "",
-    catagory: CategoryE.Shopping,
+    catagory: "Shopping",
   },
   ["HomeWorld"]: {
     google: "https://maps.app.goo.gl/ADFi827mYchbfdVs8",
-    catagory: CategoryE.Shopping,
+    catagory: "Shopping",
   },
   ["C.S. Wo & Sons"]: {
     google: "",
-    catagory: CategoryE.Shopping,
+    catagory: "Shopping",
   },
   ["Elite Discount Furniture"]: {
     google: "",
-    catagory: CategoryE.Shopping,
+    catagory: "Shopping",
   },
   ["Ashley "]: {
     google: "",
-    catagory: CategoryE.Shopping,
+    catagory: "Shopping",
   },
 };
 
 export const locationKeys = Object.keys(locations);
-export type LocationsT = keyof typeof locations;
