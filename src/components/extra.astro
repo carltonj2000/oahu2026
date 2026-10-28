@@ -1,0 +1,37 @@
+---
+import { locations } from "./locations.ts";
+import Mn from "./map-n-name.astro";
+---
+
+<>
+	<h2 class="mt-4 font-semibold">Extra Options</h2>
+	<table class="mx-1 mt-3 mb-8">
+		<thead>
+			<tr class="bg-fuchsia-300 text-left">
+				<th class="px-3 py-2">Topic</th>
+				<th class="px-3 py-2">Options</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="text-left odd:bg-fuchsia-200 even:bg-fuchsia-100">
+				<td class="px-2 py-1">Hiking</td>
+				<td class="flex flex-col px-2 py-1">
+					<ul>
+						{Object.entries(locations).map(([n, l]) => {
+							if (l.catagory !== "Hiking" && !l.notPlanned) return null;
+							return (
+								<li>
+									<Mn location={n} />
+								</li>
+							);
+						})}
+					</ul>
+				</td>
+			</tr>
+			<tr class="text-left odd:bg-fuchsia-200 even:bg-fuchsia-100">
+				<td class="px-2 py-1">Shopping</td>
+				<td class="flex flex-col px-2 py-1">tbd</td>
+			</tr>
+		</tbody>
+	</table>
+</>
