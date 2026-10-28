@@ -1,6 +1,6 @@
 export const locations: Record<
   string,
-  { google: string; link?: string; catagory?: string; notPlanned?: boolean }
+  { google: string; link?: string; catagory?: string; toSchedule?: boolean }
 > = {
   ["Polynesian Cultural Center"]: {
     google: "https://maps.app.goo.gl/TY6GYmFcCLkVL3X89",
@@ -30,7 +30,37 @@ export const locations: Record<
   ["Olomana three notches"]: {
     google: "",
     catagory: "Hiking",
-    notPlanned: true,
+    toSchedule: true,
+  },
+  ["Pali notches"]: {
+    google: "",
+    catagory: "Hiking",
+    toSchedule: true,
+  },
+  ["Kailua Beach"]: {
+    google: "",
+    catagory: "Beach",
+    toSchedule: true,
+  },
+  ["Pillbox"]: {
+    google: "",
+    catagory: "Hiking",
+    toSchedule: true,
+  },
+  ["Kayak To Mokes"]: {
+    google: "",
+    catagory: "Beach",
+    toSchedule: true,
+  },
+  ["China Walls"]: {
+    google: "",
+    catagory: "Cliff Jumping",
+    toSchedule: true,
+  },
+  ["Pearl Harbor"]: {
+    google: "",
+    catagory: "History",
+    toSchedule: true,
   },
 };
 

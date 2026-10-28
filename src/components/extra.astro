@@ -18,7 +18,8 @@ import Mn from "./map-n-name.astro";
 				<td class="flex flex-col px-2 py-1">
 					<ul>
 						{Object.entries(locations).map(([n, l]) => {
-							if (l.catagory !== "Hiking" && !l.notPlanned) return null;
+							if (l.catagory !== "Hiking") return null;
+							if (!l.toSchedule) return null;
 							return (
 								<li>
 									<Mn location={n} />
@@ -29,8 +30,20 @@ import Mn from "./map-n-name.astro";
 				</td>
 			</tr>
 			<tr class="text-left odd:bg-fuchsia-200 even:bg-fuchsia-100">
-				<td class="px-2 py-1">Shopping</td>
-				<td class="flex flex-col px-2 py-1">tbd</td>
+				<td class="px-2 py-1">Others</td>
+				<td class="flex flex-col px-2 py-1">
+					<ul>
+						{Object.entries(locations).map(([n, l]) => {
+							if (l.catagory === "Hiking") return null;
+							if (!l.toSchedule) return null;
+							return (
+								<li>
+									<Mn location={n} />
+								</li>
+							);
+						})}
+					</ul>
+				</td>
 			</tr>
 		</tbody>
 	</table>
