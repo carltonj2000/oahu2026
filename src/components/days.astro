@@ -22,50 +22,40 @@ import n2mon from "./n2mon.astro";
 import n3tue from "./n3tue.astro";
 import n4wed from "./n4wed.astro";
 
-const DaysO = {
-	Wednesday28: {
+const Days = [
+	{
 		day: new Date(2026, 9, 28),
-		weekday: "Wed",
 		content: o28wed,
 	},
-	Thursday29: {
+	{
 		day: new Date(2026, 9, 29),
-		weekday: "Thu",
 		content: o29thur,
 	},
-	Friday30: {
+	{
 		day: new Date(2026, 9, 30),
-		weekday: "Fri",
 		content: o30fri,
 	},
-	Saturday31: {
+	{
 		day: new Date(2026, 9, 31),
-		weekday: "Sat",
 		content: o31sat,
 	},
-	Sunday1: {
+	{
 		day: new Date(2026, 10, 1),
-		weekday: "Sun",
 		content: n1sun,
 	},
-	Monday2: {
+	{
 		day: new Date(2026, 11, 2),
-		weekday: "Mon",
 		content: n2mon,
 	},
-	Tuesday3: {
+	{
 		day: new Date(2026, 11, 3),
-		weekday: "Tue",
 		content: n3tue,
 	},
-	Wednesday4: {
+	{
 		day: new Date(2026, 11, 4),
-		weekday: "Wed",
 		content: n4wed,
 	},
-};
-
-const Days = Object.keys(DaysO);
+];
 
 const getOrdinalDay = (date: Date): string => {
 	const day = date.getDate();
@@ -81,6 +71,9 @@ const getOrdinalDay = (date: Date): string => {
 			return `${day}th`;
 	}
 };
+
+const shortWeekday = (d: Date): string =>
+	d.toLocaleDateString("en-US", { weekday: "short" });
 ---
 
 <table class="mx-1 mt-3">
@@ -93,13 +86,13 @@ const getOrdinalDay = (date: Date): string => {
 	</thead>
 	<tbody>
 		{Days.map((day) => {
-			const Activity = DaysO[day].content;
+			const Activity = day.content;
 			return (
 				<tr class="text-left odd:bg-fuchsia-200 even:bg-fuchsia-100">
 					<td class="px-2 py-1">
-						{DaysO[day].weekday}
+						{shortWeekday(day.day)}
 						<br />
-						{getOrdinalDay(DaysO[day].day)}
+						{getOrdinalDay(day.day)}
 					</td>
 					<td class="px-2 py-1">
 						<Activity activity={true} />

@@ -1,7 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { locations } from "../components/locations.ts";
-import Mn from "../components/map-n-name.astro";
 import Days from "../components/days.astro";
 ---
 
@@ -9,13 +7,14 @@ import Days from "../components/days.astro";
 	<main class="mx-auto flex h-full max-w-2xl flex-col items-center bg-fuchsia-50">
 		<div class="mb-3 flex w-full items-center justify-between bg-fuchsia-300 px-2 py-1">
 			<h1 class="text-xl font-semibold">Oahu</h1>
-			<h1 class="text-xl font-semibold">October 2026</h1>
+			<h1 class="text-xl font-semibold">Oct-Nov 2026</h1>
 			<h1 class="text-xl font-semibold">Plan</h1>
 		</div>
 
 		<Days />
 
-		<table class="mx-1 mt-4 mb-8">
+		<h2 class="mt-4 font-semibold">Extra Options</h2>
+		<table class="mx-1 mt-3 mb-8">
 			<thead>
 				<tr class="bg-fuchsia-300 text-left">
 					<th class="px-3 py-2">Topic</th>
