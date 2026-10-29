@@ -1,4 +1,6 @@
 ---
+import Mn from "./map-n-name.astro";
+
 interface Props {
   activity?: boolean;
 }
@@ -6,4 +8,26 @@ interface Props {
 const { activity } = Astro.props;
 ---
 
-{activity ? <div>Hiking</div> : <div>tbd</div>}
+{activity ? (
+  <div>
+    Beach
+    <br />
+    Hike
+    <br />
+    Kayak
+  </div>
+) : (
+  <div>
+    <ul>
+      <li>
+        <Mn location="Kailua Beach" />
+      </li>
+      <li>
+        <Mn location="Pillbox" />
+      </li>
+      <li>
+        <Mn location="Kayak To Mokes - Rent Soon" />
+      </li>
+    </ul>
+  </div>
+)}

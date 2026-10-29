@@ -47,10 +47,10 @@ export const locations: Record<
     catagory: "Hiking",
     toSchedule: true,
   },
-  ["Kayak To Mokes"]: {
-    google: "",
+  ["Kayak To Mokes - Rent Soon"]: {
+    google: "https://maps.app.goo.gl/QGK9BMoqoKdAsK3f7",
     catagory: "Beach",
-    toSchedule: true,
+    link: "https://www.kailuabeachadventures.com/kailua-lanikai-kayak-rentals",
   },
   ["China Walls"]: {
     google: "",
@@ -62,10 +62,38 @@ export const locations: Record<
     catagory: "History",
     toSchedule: true,
   },
+  ["Highway to heaven backwards"]: {
+    google: "",
+    catagory: "Hiking",
+    toSchedule: true,
+  },
+  ["Elite Discount Furniture Home Delivery"]: {
+    google: "https://maps.app.goo.gl/Uc1LJHbxhuzdai317",
+    catagory: "Home",
+  },
+  ["Hilton Hawaiian Village Fireworks"]: {
+    google: "https://maps.app.goo.gl/CFGUtjCqzLE7eZjf9",
+    catagory: "Beach",
+  },
+  ["Walmart"]: {
+    google: "https://maps.app.goo.gl/m2jsbdXtyVg3syvTA",
+    catagory: "Shopping",
+  },
 };
+
+export type LocationValues = (typeof locations)[keyof typeof locations];
 
 export const locationKeys = Object.keys(locations);
 /*
+
+Queens palace
+YMCA high tea
+Highway to heaven backwards 
+Humane bay
+Diamonds head
+Lahina 
+
+Big kahuna sandwich shop
 Olomana (three notches), and pali notches. I think the latter might be closed
 now but I’m sure people still do it. Up to your discretion. Kailua is worth
 going to, pillbox hike is there, the beach is really nice, and you can rent a
