@@ -40,12 +40,10 @@ export const locations: Record<
   ["Kailua Beach"]: {
     google: "",
     catagory: "Beach",
-    toSchedule: true,
   },
   ["Pillbox"]: {
     google: "",
     catagory: "Hiking",
-    toSchedule: true,
   },
   ["Kayak To Mokes - Rent Soon"]: {
     google: "https://maps.app.goo.gl/QGK9BMoqoKdAsK3f7",
@@ -78,6 +76,10 @@ export const locations: Record<
   ["Walmart"]: {
     google: "https://maps.app.goo.gl/m2jsbdXtyVg3syvTA",
     catagory: "Shopping",
+  },
+  ["Punch Bowl"]: {
+    google: "",
+    catagory: "Hike",
   },
 };
 
