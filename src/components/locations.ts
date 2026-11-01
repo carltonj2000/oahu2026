@@ -28,21 +28,19 @@ export const locations: Record<
     catagory: "Shopping",
   },
   ["Olomana three notches"]: {
-    google: "",
+    google: "https://maps.app.goo.gl/Shm8PyT76k6tcRas9",
     catagory: "Hiking",
-    toSchedule: true,
   },
   ["Pali notches"]: {
-    google: "",
+    google: "https://maps.app.goo.gl/tKLUK9AmGZNmRMta7",
     catagory: "Hiking",
-    toSchedule: true,
   },
   ["Kailua Beach"]: {
     google: "",
     catagory: "Beach",
   },
   ["Pillbox"]: {
-    google: "",
+    google: "https://maps.app.goo.gl/KuezzUch1JU3Mrjx6",
     catagory: "Hiking",
   },
   ["Kayak To Mokes - Rent Soon"]: {
@@ -53,7 +51,6 @@ export const locations: Record<
   ["China Walls"]: {
     google: "",
     catagory: "Cliff Jumping",
-    toSchedule: true,
   },
   ["Pearl Harbor"]: {
     google: "",
@@ -63,7 +60,6 @@ export const locations: Record<
   ["Highway to heaven backwards"]: {
     google: "",
     catagory: "Hiking",
-    toSchedule: true,
   },
   ["Elite Discount Furniture Home Delivery"]: {
     google: "https://maps.app.goo.gl/Uc1LJHbxhuzdai317",
@@ -77,12 +73,19 @@ export const locations: Record<
     google: "https://maps.app.goo.gl/m2jsbdXtyVg3syvTA",
     catagory: "Shopping",
   },
-  ["Punch Bowl"]: {
-    google: "",
+  ["Punchbowl Crater"]: {
+    google: "https://maps.app.goo.gl/js75PpTbBX4aP2ws9",
+    catagory: "Hike",
+  },
+  ["View of Waikiki and Diamond Head"]: {
+    google: "https://maps.app.goo.gl/AcobTvvPxvswoajE7",
+    catagory: "Hike",
+  },
+  ["Stairway to heaven"]: {
+    google: "https://maps.app.goo.gl/XegVmPCYyonwCRbj7",
     catagory: "Hike",
   },
 };
-
 export type LocationValues = (typeof locations)[keyof typeof locations];
 
 export const locationKeys = Object.keys(locations);
