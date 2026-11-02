@@ -85,6 +85,10 @@ export const locations: Record<
     google: "https://maps.app.goo.gl/XegVmPCYyonwCRbj7",
     catagory: "Hike",
   },
+  ["Mount Kaʻala"]: {
+    google: "https://maps.app.goo.gl/BuqsmabGfmujNMZ19",
+    catagory: "Hike",
+  },
 };
 export type LocationValues = (typeof locations)[keyof typeof locations];
 
