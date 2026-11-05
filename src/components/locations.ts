@@ -1,9 +1,16 @@
 export const locations: Record<
   string,
-  { google: string; link?: string; catagory?: string; toSchedule?: boolean }
+  {
+    google: string;
+    apple?: string;
+    link?: string;
+    catagory?: string;
+    toSchedule?: boolean;
+  }
 > = {
   ["Polynesian Cultural Center"]: {
     google: "https://maps.app.goo.gl/TY6GYmFcCLkVL3X89",
+    apple: "https://maps.apple/p/QjAAvNSm256e9D",
     link: "https://www.polynesia.com/",
     catagory: "Cultural",
   },
@@ -29,6 +36,7 @@ export const locations: Record<
   },
   ["Olomana three notches"]: {
     google: "https://maps.app.goo.gl/Shm8PyT76k6tcRas9",
+    apple: "https://maps.apple/p/Lhm~JaAaI824nR",
     catagory: "Hiking",
   },
   ["Pali notches"]: {
@@ -63,18 +71,22 @@ export const locations: Record<
   },
   ["Elite Discount Furniture Home Delivery"]: {
     google: "https://maps.app.goo.gl/Uc1LJHbxhuzdai317",
+    apple: "https://maps.apple/p/dv_~o5MvvkmUwe",
     catagory: "Home",
   },
   ["Hilton Hawaiian Village Fireworks"]: {
     google: "https://maps.app.goo.gl/CFGUtjCqzLE7eZjf9",
+    apple: "https://maps.apple/p/xfhVe8CA1Cemew",
     catagory: "Beach",
   },
   ["Walmart"]: {
     google: "https://maps.app.goo.gl/m2jsbdXtyVg3syvTA",
+    apple: "https://maps.apple/p/zf--a9ca3uAU3w",
     catagory: "Shopping",
   },
   ["Punchbowl Crater"]: {
     google: "https://maps.app.goo.gl/js75PpTbBX4aP2ws9",
+    apple: "https://maps.apple/p/xrI-VP~LGBrMnA",
     catagory: "Hike",
   },
   ["View of Waikiki and Diamond Head"]: {
