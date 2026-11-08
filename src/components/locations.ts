@@ -2,7 +2,7 @@ export const locations: Record<
   string,
   {
     google: string;
-    apple?: string;
+    apple: string;
     link?: string;
     catagory?: string;
     toSchedule?: boolean;
@@ -16,22 +16,27 @@ export const locations: Record<
   },
   ["Apt by HomeWorld"]: {
     google: "",
+    apple: "",
     catagory: "Shopping",
   },
   ["HomeWorld"]: {
     google: "https://maps.app.goo.gl/ADFi827mYchbfdVs8",
+    apple: "",
     catagory: "Shopping",
   },
   ["C.S. Wo & Sons"]: {
     google: "",
+    apple: "",
     catagory: "Shopping",
   },
   ["Elite Discount Furniture"]: {
     google: "",
+    apple: "",
     catagory: "Shopping",
   },
   ["Ashley"]: {
     google: "",
+    apple: "",
     catagory: "Shopping",
   },
   ["Olomana three notches"]: {
@@ -41,32 +46,39 @@ export const locations: Record<
   },
   ["Pali notches"]: {
     google: "https://maps.app.goo.gl/tKLUK9AmGZNmRMta7",
+    apple: "https://maps.apple/p/0SzTcdK1hqocq1",
     catagory: "Hiking",
   },
   ["Kailua Beach"]: {
     google: "",
+    apple: "",
     catagory: "Beach",
   },
   ["Pillbox"]: {
     google: "https://maps.app.goo.gl/KuezzUch1JU3Mrjx6",
+    apple: "",
     catagory: "Hiking",
   },
   ["Kayak To Mokes - Rent Soon"]: {
     google: "https://maps.app.goo.gl/QGK9BMoqoKdAsK3f7",
+    apple: "",
     catagory: "Beach",
     link: "https://www.kailuabeachadventures.com/kailua-lanikai-kayak-rentals",
   },
   ["China Walls"]: {
     google: "",
+    apple: "",
     catagory: "Cliff Jumping",
   },
   ["Pearl Harbor"]: {
     google: "",
+    apple: "",
     catagory: "History",
     toSchedule: true,
   },
   ["Highway to heaven backwards"]: {
     google: "",
+    apple: "",
     catagory: "Hiking",
   },
   ["Elite Discount Furniture Home Delivery"]: {
@@ -91,14 +103,17 @@ export const locations: Record<
   },
   ["View of Waikiki and Diamond Head"]: {
     google: "https://maps.app.goo.gl/AcobTvvPxvswoajE7",
+    apple: "",
     catagory: "Hike",
   },
   ["Stairway to heaven"]: {
     google: "https://maps.app.goo.gl/XegVmPCYyonwCRbj7",
+    apple: "",
     catagory: "Hike",
   },
   ["Mount Kaʻala"]: {
     google: "https://maps.app.goo.gl/BuqsmabGfmujNMZ19",
+    apple: "",
     catagory: "Hike",
   },
 };
@@ -113,7 +128,6 @@ Highway to heaven backwards
 Humane bay
 Diamonds head
 Lahina 
-
 Big kahuna sandwich shop
 Olomana (three notches), and pali notches. I think the latter might be closed
 now but I’m sure people still do it. Up to your discretion. Kailua is worth
