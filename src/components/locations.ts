@@ -50,18 +50,18 @@ export const locations: Record<
     catagory: "Hiking",
   },
   ["Kailua Beach"]: {
-    google: "",
-    apple: "",
+    google: "https://share.google/CMIFQ1n7o7iYSUGZB",
+    apple: "https://maps.apple/p/fmdakmn5RVyM1c",
     catagory: "Beach",
   },
   ["Pillbox"]: {
     google: "https://maps.app.goo.gl/KuezzUch1JU3Mrjx6",
-    apple: "",
+    apple: "https://maps.apple/p/t8Wu1GuG-KiT.D",
     catagory: "Hiking",
   },
-  ["Kayak To Mokes - Rent Soon"]: {
+  ["Kayak To Mokes Rental"]: {
     google: "https://maps.app.goo.gl/QGK9BMoqoKdAsK3f7",
-    apple: "",
+    apple: "https://maps.apple/p/DR2eiePJeFjDru",
     catagory: "Beach",
     link: "https://www.kailuabeachadventures.com/kailua-lanikai-kayak-rentals",
   },
@@ -71,8 +71,8 @@ export const locations: Record<
     catagory: "Cliff Jumping",
   },
   ["Pearl Harbor"]: {
-    google: "",
-    apple: "",
+    google: "https://maps.app.goo.gl/9E72JMCkAKXoCYCV9",
+    apple: "https://maps.apple/p/0niQ70z1DV.fw_",
     catagory: "History",
     toSchedule: true,
   },
@@ -103,17 +103,17 @@ export const locations: Record<
   },
   ["View of Waikiki and Diamond Head"]: {
     google: "https://maps.app.goo.gl/AcobTvvPxvswoajE7",
-    apple: "",
+    apple: "https://maps.apple/p/tcUpGq2ibx0p_Z",
     catagory: "Hike",
   },
   ["Stairway to heaven"]: {
     google: "https://maps.app.goo.gl/XegVmPCYyonwCRbj7",
-    apple: "",
+    apple: "https://maps.apple/p/6.Muc3HFX0fn9I",
     catagory: "Hike",
   },
   ["Mount Kaʻala"]: {
     google: "https://maps.app.goo.gl/BuqsmabGfmujNMZ19",
-    apple: "",
+    apple: "https://maps.apple/p/dvI4B9jvyBc4BG",
     catagory: "Hike",
   },
 };
